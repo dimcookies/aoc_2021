@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, "..")
 import my_input
 from utils import pr
 i_s = False

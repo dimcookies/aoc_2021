@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, "..")
 import my_input
 from utils import pr
 i_s = False
@@ -9,9 +11,7 @@ pr(i_s, input)
 #print(len(list(filter(lambda x: input[x] < input[x+1] ,range(len(input) - 1)))))
 
 x = sum([int(x[1]) for x in input if x[0] == 'forward'])
-
 y = sum([int(x[1]) if x[0] == 'down' else (-1 * int(x[1])) for x in input if x[0] != 'forward'])
-
 print(x*y)
 
         
