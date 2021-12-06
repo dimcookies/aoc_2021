@@ -8,9 +8,9 @@ def readlines(file_input):
     with open(os.path.join(sys.path[1], file_input), "r") as f:
         return list(map(lambda x: x.strip(),f.readlines()))
 
-def readlines_array(file_input):
+def readlines_array(file_input, sep=" "):
     with open(os.path.join(sys.path[1], file_input), "r") as f:
-        return list(map(lambda x: list(map(lambda y: y.strip(), x.strip().split())),f.readlines()))                
+        return list(map(lambda x: list(map(lambda y: y.strip(), x.strip().split(sep))),f.readlines()))                
 
 def readlines_str_array(file_input):
     with open(os.path.join(sys.path[1], file_input), "r") as f:
@@ -22,6 +22,6 @@ def readlines_int(file_input):
         return list(map(lambda x: int(x.strip()),f.readlines()))                
 
 
-def readlines_int_array(file_input):
+def readlines_int_array(file_input, sep=" "):
     with open(os.path.join(sys.path[1], file_input), "r") as f:
-        return list(map(lambda x: list(map(lambda y: int(y.strip()), x.strip().split())),f.readlines()))                
+        return list(map(lambda x: list(map(lambda y: int(y.strip()), x.strip().split(sep))),f.readlines()))                
