@@ -1,6 +1,7 @@
 import sys
 sys.path.insert(0, "..")
 import my_input
+from collections import Counter
 from utils import pr
 i_s = False
 i_puzzle = 1
@@ -22,7 +23,6 @@ def get_mappings(s):
     five_digit = [i for i in ar if len(i) == 5]
     six_digit = [i for i in ar if len(i) == 6]
 
-    from collections import Counter
     cnt = Counter("".join(five_digit))
 
     d2_d5 = [i for i in cnt.keys() if cnt[i] == 1]
