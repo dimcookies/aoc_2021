@@ -25,3 +25,7 @@ def readlines_int(file_input):
 def readlines_int_array(file_input, sep=" "):
     with open(os.path.join(sys.path[1], file_input), "r") as f:
         return list(map(lambda x: list(map(lambda y: int(y.strip()), x.strip().split(sep))),f.readlines()))                
+
+def readlines_int_array_single(file_input):
+    with open(os.path.join(sys.path[1], file_input), "r") as f:
+        return list(map(lambda x: list(map(lambda y: int(y.strip()), list(x.strip()))),f.readlines()))                
